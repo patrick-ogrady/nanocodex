@@ -1000,7 +1000,6 @@ fn output_reply(
                                 }
                                 json!({"type":"base64","media_type":media_type,"data":data})
                             }
-                            // The Claude driver replaces a remote image with a note.
                             ImageSource::Url { url } => json!({"type":"url","url":url}),
                         };
                         json!({"type":"image","source":source})
